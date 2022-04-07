@@ -7,7 +7,9 @@ Examples:
 
 */
 function doubleValues(arr){
-    
+    return arr.map(function(val){
+        return val * 2;
+    });
 }
 
 /*
@@ -19,7 +21,9 @@ Examples:
 
 */
 function onlyEvenValues(arr){
-    
+    return arr.filter(function(val){
+        return !(val%2);
+    })
 }
 
 /*
@@ -31,7 +35,10 @@ Examples:
 
 */
 function showFirstAndLast(arr){
-    
+    return arr.map(function(name){
+        let nameArray = [...name]
+        return `${nameArray[0]}${nameArray.pop()}`;
+    })
 }
 
 /*
@@ -44,7 +51,10 @@ Examples:
 
 */
 function addKeyAndValue(arr,key,value){
-    
+    return arr.map(function(obj){
+        obj[key] = value;
+        return obj;
+    })
 }
 
 /*
@@ -58,7 +68,13 @@ Examples:
     vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
 */
 function vowelCount(str){
-   
+    let countObject = {};
+}
+
+function isVowel(str){
+    if ('aeiou'.indexOf(str) === -1){
+        return false;
+    } else return true;
 }
 
 /*
